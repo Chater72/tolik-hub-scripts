@@ -42,6 +42,33 @@
         opacity: 1;
         visibility: visible;
     }
+
+    /* Поле поиска */
+    .search-container {
+        margin: 30px auto;
+        max-width: 700px;
+        text-align: center;
+    }
+    #script-search {
+        width: 90%;
+        max-width: 600px;
+        padding: 14px 20px;
+        font-size: 1.2rem;
+        background: #111;
+        border: 2px solid #ff0000;
+        color: #fff;
+        border-radius: 12px;
+        outline: none;
+        transition: all 0.3s;
+        text-align: center;
+    }
+    #script-search:focus {
+        border-color: #00ffff;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+    }
+    #script-search::placeholder {
+        color: #777;
+    }
 </style>
 </head>
 <body>
@@ -60,9 +87,15 @@
 
 <div class="page-content">
     <h2 class="neon-text" data-ru="Скрипты" data-en="Scripts">Скрипты</h2>
+
+    <!-- ПОЛЕ ПОИСКА -->
+    <div class="search-container">
+        <input type="text" id="script-search" placeholder="Поиск по названию или автору..." data-ru-placeholder="Поиск по названию или автору..." data-en-placeholder="Search by name or author...">
+    </div>
+
     <div id="scripts-container">
 
-        <!-- Все твои скрипты (1-17) -->
+        <!-- Твои основные скрипты -->
         <div class="script-card">
             <h3>Break In Free Roles</h3>
             <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
@@ -288,7 +321,7 @@
             </div>
         </div>
 
-        <!-- РАЗДЕЛ "ДРУГИЕ СКРИПТЫ" — ПОСЛЕ ВСЕХ ТВОИХ -->
+        <!-- РАЗДЕЛ "ДРУГИЕ СКРИПТЫ" -->
         <h2 class="blue-neon" data-ru="Другие скрипты" data-en="Other scripts">Другие скрипты</h2>
 
         <div class="script-card">
@@ -312,7 +345,36 @@
 <script src="js/lang.js"></script>
 
 <script>
-// Копирование loadstring в буфер обмена
+// Поиск по скриптам
+const searchInput = document.getElementById('script-search');
+const cards = document.querySelectorAll('.script-card');
+
+searchInput.addEventListener('input', function() {
+    const query = this.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const author = card.querySelector('p strong').nextSibling.textContent.toLowerCase().trim();
+
+        if (title.includes(query) || author.includes(query)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
+
+// Автоматический перевод плейсхолдера при смене языка
+function toggleLang() {
+    // Твой существующий код toggleLang() из lang.js
+    // Добавляем обновление плейсхолдера
+    const isRu = document.documentElement.lang === 'ru';
+    searchInput.placeholder = isRu ? searchInput.dataset.ruPlaceholder : searchInput.dataset.enPlaceholder;
+}
+</script>
+
+<script>
+// Копирование loadstring
 document.querySelectorAll('.copy-link-btn').forEach(btn => {
     btn.addEventListener('click', async () => {
         const rawUrl = btn.getAttribute('data-link');
