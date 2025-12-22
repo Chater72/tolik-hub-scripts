@@ -1,0 +1,201 @@
+body { 
+    margin:0; 
+    font-family:Arial,sans-serif; 
+    background:#0c0c0c; 
+    color:#fff; 
+}
+
+.navbar { 
+    position:fixed; 
+    top:0; 
+    width:100%; 
+    display:flex; 
+    justify-content:flex-start; 
+    background:#000; 
+    height:60px; 
+    z-index:1000; 
+    padding:0 10px;
+}
+
+.nav-buttons { 
+    display:flex; 
+    flex-wrap:nowrap; 
+    gap:12px; 
+    align-items:center; 
+    width:100%;
+    overflow-x:auto;
+    padding:8px 0;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+}
+
+.nav-buttons::-webkit-scrollbar {
+    display:none;
+}
+
+.nav-btn, .lang-btn { 
+    background:none; 
+    border:none; 
+    color:#fff; 
+    font-size:1rem; 
+    cursor:pointer; 
+    padding:10px 16px; 
+    transition:0.3s; 
+    text-decoration:none; 
+    flex-shrink:0;
+    white-space:nowrap;
+    min-width:120px;
+    text-align:center;
+    border-radius:8px;
+}
+
+.nav-btn:hover, .lang-btn:hover { 
+    color:#ff0000; 
+    text-shadow:0 0 10px #ff0000; 
+}
+
+.lang-btn {
+    margin-left:auto; /* всегда справа */
+    background:#ff0000;
+    color:#000;
+    font-weight:bold;
+}
+
+.hero, .page-content { 
+    margin-top:70px; 
+    text-align:center; 
+    padding:20px; 
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    gap:15px; 
+}
+
+.neon-text { 
+    color:#ff0000; 
+    text-shadow:0 0 5px #ff0000,0 0 10px #ff0000,0 0 20px #ff0000,0 0 40px #ff0000; 
+}
+
+.big { 
+    font-size:1.2rem; 
+    text-align:center; 
+}
+
+input, textarea, select { 
+    display:block; 
+    margin:10px auto; 
+    padding:10px; 
+    width:90%; 
+    max-width:300px; 
+    background:#111; 
+    border:1px solid #ff0000; 
+    color:#fff; 
+}
+
+.send-btn { 
+    padding:10px 20px; 
+    cursor:pointer; 
+    background:none; 
+    border:1px solid #ff0000; 
+    color:#fff; 
+    transition:0.3s; 
+}
+
+.send-btn:hover { 
+    color:#000; 
+    background:#ff0000; 
+    text-shadow:0 0 10px #ff0000; 
+}
+
+/* Карточки скриптов */
+#scripts-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    #scripts-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+.script-card {
+    background: #111;
+    border: 2px solid #ff0000;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.script-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+}
+
+.script-card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    margin: 15px 0;
+}
+
+.script-card .send-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 1.2rem;
+    background: none;
+    border: 2px solid #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.script-card .send-btn:hover {
+    background: #ff0000;
+    color: #000;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* Мобильные улучшения */
+@media screen and (max-width: 768px) {
+    .page-content, .hero {
+        margin-top: 70px;
+    }
+
+    body, html {
+        overflow-x: hidden;
+    }
+
+    .nav-btn, .lang-btn {
+        font-size: 0.95rem;
+        padding: 10px 14px;
+        min-width: 110px;
+    }
+
+    .lang-btn {
+        min-width: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-btn, .lang-btn {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+        min-width: 100px;
+    }
+
+    .lang-btn {
+        min-width: 70px;
+    }
+}

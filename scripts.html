@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scripts - Tolik Hub Scripts</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    .blue-neon {
+        color: #00ffff !important;
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+        font-size: 2rem;
+        margin: 80px 0 40px 0;
+        text-align: center;
+    }
+    .verified {
+        color: #00ff00;
+        font-size: 1.3em;
+        margin-left: 8px;
+        cursor: help;
+        position: relative;
+    }
+    .verified::after {
+        content: "Подтверждённый автор";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+        background: #111;
+        color: #00ff00;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 10;
+    }
+    .verified:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-buttons">
+        <a class="nav-btn" href="index.html" data-ru="Главная" data-en="Home">Главная</a>
+        <a class="nav-btn" href="scripts.html" data-ru="Скрипты" data-en="Scripts">Скрипты</a>
+        <a class="nav-btn" href="add.html" data-ru="Добавить скрипт" data-en="Add Script">Добавить скрипт</a>
+        <a class="nav-btn" href="help.html" data-ru="Помощь" data-en="Help">Помощь</a>
+        <a class="nav-btn" href="about.html" data-ru="О сайте" data-en="About">О сайте</a>
+        <a class="nav-btn" href="credits.html" data-ru="Авторы" data-en="Credits">Авторы</a>
+        <a class="nav-btn" href="report.html" data-ru="Жалоба" data-en="Report">Жалоба</a>
+        <button class="lang-btn" onclick="toggleLang()">RU/EN</button>
+    </div>
+</nav>
+
+<div class="page-content">
+    <h2 class="neon-text" data-ru="Скрипты" data-en="Scripts">Скрипты</h2>
+    <div id="scripts-container">
+
+        <!-- Все твои скрипты (1-17) -->
+        <div class="script-card">
+            <h3>Break In Free Roles</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/1.jpg" alt="Break In Free Roles" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Free-roles-break-in/refs/heads/main/Break%20in%20free%20roles">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Gang Up On People Simulator - Auto Farm Money</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/2.jpg" alt="Gang Up On People Simulator - Auto Farm Money" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Gang-up-on-people-simulator/refs/heads/main/auto%20farm%20money">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Tolik Hub Gamescripts</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/3.jpg" alt="Tolik Hub Gamescripts" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Tolikhub/refs/heads/main/gamescripts.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Dead Rails Free Role</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/5.jpg" alt="Dead Rails Free Role" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#ff0000; font-size:1.4em; font-weight:bold;">❌</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Dead-rails-free-role/refs/heads/main/free%20role">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Abilities Manager</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/6.jpg" alt="Abilities Manager" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Abilities-Giver/refs/heads/main/Abilities-Manager.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>99 Day Forest</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/7.jpg" alt="99 Day Forest" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/99-day-forest-script/refs/heads/main/99%20day%20forest.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Slap Battles - Give All Gloves</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/8.jpg" alt="Slap Battles - Give All Gloves" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Slap-battles/refs/heads/main/Give%20all%20gloves">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Speed Coil + Gravity Coil Boost Tools</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/9.jpg" alt="Speed Coil + Gravity Coil Boost Tools" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Speed-coil-gravity-coil/refs/heads/main/Boost%20Tools.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Chomped - Auto Farm</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/10.jpg" alt="Chomped - Auto Farm" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Chomped/refs/heads/main/Auto%20farm">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Fire Remotes - Free Gamepasses & Event</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/11.jpg" alt="Fire Remotes - Free Gamepasses & Event" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Fire-remotes/refs/heads/main/free%20gamepasses%20and%20event">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Monster TD</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/12.jpg" alt="Monster TD" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Monster-TD/refs/heads/main/script.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>MM2 God Cheat (Thub Menu)</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/13.jpg" alt="MM2 God Cheat (Thub Menu)" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#ff0000; font-size:1.4em; font-weight:bold;">❌</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Thub/refs/heads/main/mm2%20god%20cheat">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Slap Battles But Bad - Auto Farm</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/14.jpg" alt="Slap Battles But Bad - Auto Farm" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Slap-battles-But-Bad-/refs/heads/main/Auto-Farm">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Steal a Car</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/16.jpg" alt="Steal a Car" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Steal-a-car/refs/heads/main/Script-steal-a-Car.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Part Detector</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/17.jpg" alt="Part Detector" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/part-detector/refs/heads/main/Part-detector">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <!-- РАЗДЕЛ "ДРУГИЕ СКРИПТЫ" — ПОСЛЕ ВСЕХ ТВОИХ -->
+        <h2 class="blue-neon" data-ru="Другие скрипты" data-en="Other scripts">Другие скрипты</h2>
+
+        <div class="script-card">
+            <h3>Fling Gui</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/18.jpg" alt="Fling Gui" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> prespeshnikShashlika <span class="verified">✅</span></p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://glot.io/snippets/h86gnsdgud/raw/FlingGui.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/lang.js"></script>
+
+<script>
+// Копирование loadstring в буфер обмена
+document.querySelectorAll('.copy-link-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+        const rawUrl = btn.getAttribute('data-link');
+        const loadstringCode = `loadstring(game:HttpGet("${rawUrl}"))()`;
+
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(loadstringCode);
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = loadstringCode;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+            }
+
+            const original = btn.innerHTML;
+            btn.innerHTML = 'Скопировано!';
+            btn.style.background = '#00ff00';
+            btn.style.color = '#000';
+            setTimeout(() => {
+                btn.innerHTML = original;
+                btn.style.background = '';
+                btn.style.color = '';
+            }, 2000);
+        } catch (err) {
+            alert('Ошибка копирования. Скопируй вручную:\n' + loadstringCode);
+        }
+    });
+});
+</script>
+</body>
+</html>
