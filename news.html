@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News - Tolik Hub Scripts</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    .update-title {
+        color: #ff0000;
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 60px 0 40px 0;
+    }
+    .update-list {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        font-size: 1.3rem;
+        line-height: 2.2;
+    }
+    .update-item {
+        position: relative;
+        padding-right: 50px;
+    }
+    .verified-update {
+        color: #00ff00;
+        font-size: 1.4em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: help;
+    }
+    .verified-update::after {
+        content: "Подтверждено создателем";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -35px;
+        background: #111;
+        color: #00ff00;
+        padding: 8px 15px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        z-index: 10;
+    }
+    .verified-update:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-buttons">
+        <a class="nav-btn" href="index.html" data-ru="Главная" data-en="Home">Главная</a>
+        <a class="nav-btn" href="scripts.html" data-ru="Скрипты" data-en="Scripts">Скрипты</a>
+        <a class="nav-btn" href="news.html" data-ru="News" data-en="News">News</a>
+        <a class="nav-btn" href="add.html" data-ru="Добавить скрипт" data-en="Add Script">Добавить скрипт</a>
+        <a class="nav-btn" href="help.html" data-ru="Помощь" data-en="Help">Помощь</a>
+        <a class="nav-btn" href="about.html" data-ru="О сайте" data-en="About">О сайте</a>
+        <a class="nav-btn" href="credits.html" data-ru="Авторы" data-en="Credits">Авторы</a>
+        <a class="nav-btn" href="report.html" data-ru="Жалоба" data-en="Report">Жалоба</a>
+        <button class="lang-btn" onclick="toggleLang()">RU/EN</button>
+    </div>
+</nav>
+
+<div class="page-content">
+    <h2 class="neon-text" data-ru="News - Обновления" data-en="News - Updates">News - Обновления</h2>
+
+    <div class="update-title">v1.0 Beta Release 🔥</div>
+
+    <div class="update-list">
+        <div class="update-item">
+            🔍 Добавлен поиск для телефонов и ПК юзеров во вкладке Scripts (для упрощения работы)
+            <span class="verified-update">✅</span>
+        </div>
+        <div class="update-item">
+            Добавлен Fling Gui от создателя канала Anarcho Scripts — Максона (prespeshnikShashlika)
+            <span class="verified-update">✅</span>
+        </div>
+        <div class="update-item">
+            Добавлены галочки для авторов — теперь видно, что это официальные авторы скриптов
+            <span class="verified-update">✅</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/lang.js"></script>
+</body>
+</html>
