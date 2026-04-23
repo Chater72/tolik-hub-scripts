@@ -1,0 +1,96 @@
+{
+  "launcher_version": "1.0.0",
+  "author": "tolik_scripter",
+  "scripts": [
+    {
+      "id": 1,
+      "title": "Break In Free Roles",
+      "author": "tolik_scripter",
+      "status": "working",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/1.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/Free-roles-break-in/refs/heads/main/Break%20in%20free%20roles'))()"
+    },
+    {
+      "id": 2,
+      "title": "Gang Up On People Simulator - Auto Farm Money",
+      "author": "tolik_scripter",
+      "status": "working",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/2.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/Gang-up-on-people-simulator/refs/heads/main/auto%20farm%20money'))()"
+    },
+    {
+      "id": 3,
+      "title": "Tolik Hub Gamescripts",
+      "author": "tolik_scripter",
+      "status": "broken",
+      "is_safe": false,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/3.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/Tolikhub/refs/heads/main/gamescripts.lua'))()"
+    },
+    {
+      "id": 4,
+      "title": "Dead Rails Free Role",
+      "author": "tolik_scripter",
+      "status": "broken",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/5.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/Dead-rails-free-role/refs/heads/main/free%20role'))()"
+    },
+    {
+      "id": 5,
+      "title": "Abilities Manager",
+      "author": "tolik_scripter",
+      "status": "working",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/6.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/Abilities-Giver/refs/heads/main/Abilities-Manager.lua'))()"
+    },
+    {
+      "id": 6,
+      "title": "99 Day Forest",
+      "author": "tolik_scripter",
+      "status": "working",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/7.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/99-day-forest-script/refs/heads/main/99%20day%20forest.lua'))()"
+    },
+    {
+      "id": 7,
+      "title": "Slap Battles - Give All Gloves",
+      "author": "tolik_scripter",
+      "status": "working",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/8.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/Slap-battles/refs/heads/main/Give%20all%20gloves'))()"
+    },
+    {
+      "id": 8,
+      "title": "Speed Coil + Gravity Coil Boost Tools",
+      "author": "tolik_scripter",
+      "status": "working",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/9.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/Speed-coil-gravity-coil/refs/heads/main/Boost%20Tools.lua'))()"
+    },
+    {
+      "id": 9,
+      "title": "Chomped - Auto Farm",
+      "author": "tolik_scripter",
+      "status": "working",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/10.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://raw.githubusercontent.com/Chater72/Chomped/refs/heads/main/Auto%20farm'))()"
+    },
+    {
+      "id": 10,
+      "title": "Fling Gui",
+      "author": "prespeshnikShashlika",
+      "status": "working",
+      "is_safe": true,
+      "image_url": "https://raw.githubusercontent.com/Chater72/tolik-hub-scripts/main/images/18.jpg",
+      "loadstring": "loadstring(game:HttpGet('https://glot.io/snippets/h86gnsdgud/raw/FlingGui.lua'))()"
+    }
+  ]
+}
