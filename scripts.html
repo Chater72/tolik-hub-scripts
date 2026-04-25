@@ -42,7 +42,6 @@
         opacity: 1;
         visibility: visible;
     }
-
     /* Поле поиска */
     .search-container {
         margin: 30px auto;
@@ -87,15 +86,15 @@
 
 <div class="page-content">
     <h2 class="neon-text" data-ru="Скрипты" data-en="Scripts">Скрипты</h2>
-
+    
     <!-- ПОЛЕ ПОИСКА -->
     <div class="search-container">
         <input type="text" id="script-search" placeholder="Поиск по названию или автору..." data-ru-placeholder="Поиск по названию или автору..." data-en-placeholder="Search by name or author...">
     </div>
 
     <div id="scripts-container">
+        <!-- ==================== ТВОИ ОСНОВНЫЕ СКРИПТЫ ==================== -->
 
-        <!-- Твои основные скрипты -->
         <div class="script-card">
             <h3>Break In Free Roles</h3>
             <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
@@ -321,7 +320,54 @@
             </div>
         </div>
 
-        <!-- РАЗДЕЛ "ДРУГИЕ СКРИПТЫ" -->
+        <!-- ==================== НОВЫЕ СКРИПТЫ ==================== -->
+
+        <div class="script-card">
+            <h3>Murder Mystery 2</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/19.jpg" alt="Murder Mystery 2" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Murder-Mystery-2-Hub/refs/heads/main/Script.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Dandy's World</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/20.jpg" alt="Dandy's World" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Dandy-s-World/refs/heads/main/script.lua">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Byte By Night</h3>
+            <div style="border:2px solid #ff0000; border-radius:12px; padding:15px; background:#111; margin:20px 0; text-align:center;">
+                <img src="images/21.jpg" alt="Byte By Night" style="width:100%; height:auto; border-radius:8px;">
+            </div>
+            <p><strong>Автор:</strong> tolik_scripter</p>
+            <p><strong>Работает:</strong> <span style="color:#00ff00; font-size:1.4em; font-weight:bold;">✔</span></p>
+            <p><strong>Вирусы:</strong> <span style="color:#00ff00;">Не обнаружены</span></p>
+            <div style="text-align:center; margin:30px 0;">
+                <button class="send-btn copy-link-btn" style="padding:16px 50px; font-size:1.3rem;" data-link="https://raw.githubusercontent.com/Chater72/Byte-By-Night/refs/heads/main/esp">
+                    📋 Скопировать loadstring
+                </button>
+            </div>
+        </div>
+
+        <!-- ==================== ДРУГИЕ СКРИПТЫ (от других людей) ==================== -->
         <h2 class="blue-neon" data-ru="Другие скрипты" data-en="Other scripts">Другие скрипты</h2>
 
         <div class="script-card">
@@ -338,24 +384,20 @@
                 </button>
             </div>
         </div>
-
     </div>
 </div>
 
 <script src="js/lang.js"></script>
-
 <script>
 // Поиск по скриптам
 const searchInput = document.getElementById('script-search');
 const cards = document.querySelectorAll('.script-card');
-
 searchInput.addEventListener('input', function() {
     const query = this.value.toLowerCase().trim();
-
     cards.forEach(card => {
         const title = card.querySelector('h3').textContent.toLowerCase();
-        const author = card.querySelector('p strong').nextSibling.textContent.toLowerCase().trim();
-
+        const authorEl = card.querySelector('p strong');
+        const author = authorEl ? authorEl.nextSibling.textContent.toLowerCase().trim() : '';
         if (title.includes(query) || author.includes(query)) {
             card.style.display = '';
         } else {
@@ -363,14 +405,6 @@ searchInput.addEventListener('input', function() {
         }
     });
 });
-
-// Автоматический перевод плейсхолдера при смене языка
-function toggleLang() {
-    // Твой существующий код toggleLang() из lang.js
-    // Добавляем обновление плейсхолдера
-    const isRu = document.documentElement.lang === 'ru';
-    searchInput.placeholder = isRu ? searchInput.dataset.ruPlaceholder : searchInput.dataset.enPlaceholder;
-}
 </script>
 
 <script>
@@ -379,7 +413,6 @@ document.querySelectorAll('.copy-link-btn').forEach(btn => {
     btn.addEventListener('click', async () => {
         const rawUrl = btn.getAttribute('data-link');
         const loadstringCode = `loadstring(game:HttpGet("${rawUrl}"))()`;
-
         try {
             if (navigator.clipboard && window.isSecureContext) {
                 await navigator.clipboard.writeText(loadstringCode);
@@ -391,9 +424,8 @@ document.querySelectorAll('.copy-link-btn').forEach(btn => {
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
             }
-
             const original = btn.innerHTML;
-            btn.innerHTML = 'Скопировано!';
+            btn.innerHTML = '✅ Скопировано!';
             btn.style.background = '#00ff00';
             btn.style.color = '#000';
             setTimeout(() => {
@@ -409,5 +441,3 @@ document.querySelectorAll('.copy-link-btn').forEach(btn => {
 </script>
 </body>
 </html>
-
-
